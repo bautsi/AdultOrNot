@@ -1,0 +1,36 @@
+AFAD(Asian Face Age Dataset) only 15 ~ 75 https://github.com/John-niu-07/tarball
+
+All-Age-Faces-Dataset 2 ~ 80 https://github.com/JingchunCheng/All-Age-Faces-Dataset
+
+Original images folder split into adult and minor folders
+
+Rename all images from: 
+    serial number + adult or minor + age Ex. 00001A02 
+to:
+    adult or minor + serial number Ex. A1
+
+Random split images half to train and test folders
+
+Tensorflow gpu usage doesn't support windows anymore -> use cpu / colab
+    colab train too slow -> use cpu
+
+VGG16: 
+    batch_size = 32, train and test dataset -> 13322 = 6660 + 6662, epoch = 10
+    set steps_per_epoch = validation_steps = 208
+    colab : 1.5hr one epoch, cpu 5min(unreal) one epoch
+    steps_per_epoch = 100, validation_steps = 50
+    
+    VGG16_1.h5: 
+        train_results\VGG16_1-batch_size32-steps_per_epoch100-validation_steps50-epochs3.png
+        val_acc didn't change val_loss slightly raise + training overfit
+        -> maybe dataset is too small
+        --> add dropout,l1 l2 regularization / without train only input output
+    
+Decide to focuse on ages near 18
+-> 1. use AFAD dataset 15 ~ 23 ages to test accuracy over every well-known,
+    -> well behavior pretrained models
+-> 2. use AAFD dataset 13 ~ 23 ages to try training above pretrained models accuracy
+-> 3. self build a model to precicely identify adult or not by comparing other models
+-> 4. try to combine self model and a single pretrained model to see if it performs
+    -> better than any others
+-> 5. try to combine multiple models or self trained model together
