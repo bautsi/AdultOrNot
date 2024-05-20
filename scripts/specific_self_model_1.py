@@ -1,13 +1,10 @@
 import os
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import tensorflow as tf
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-# 建立一個簡單的卷積神經網絡模型
 model = Sequential([
     Conv2D(32, (3, 3), activation='relu', input_shape=(224, 224, 3)),
     MaxPooling2D(2, 2),
@@ -18,15 +15,14 @@ model = Sequential([
     Flatten(),
     Dense(512, activation='relu'),
     Dropout(0.5),
-    Dense(1, activation='sigmoid')  # 二分类输出层
+    Dense(1, activation='sigmoid')
 ])
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# 创建一个 DataFrame，用于 ImageDataGenerator
 def create_dataframe(folder):
     images = []
-    labels = []  # 'A' for adult, 'M' for minor
+    labels = []
     for filename in os.listdir(folder):
         if filename.startswith('A') and filename.lower().endswith(('png', 'jpg', 'jpeg')):
             images.append(os.path.join(folder, filename))
@@ -36,9 +32,8 @@ def create_dataframe(folder):
             labels.append('M')
     return pd.DataFrame({'filename': images, 'class': labels})
 
-# 准备训练和测试数据
 train_df = create_dataframe('data/specific_images')
-test_df = train_df.sample(frac=0.2)  # 抽取20%作为测试集
+test_df = train_df.sample(frac=0.2)  # 抽取20%作為測試集
 train_df = train_df.drop(test_df.index)
 
 train_datagen = ImageDataGenerator(rescale=1./255)
@@ -63,7 +58,6 @@ test_generator = test_datagen.flow_from_dataframe(
     shuffle=False
 )
 
-# 训练模型
 history = model.fit(
     train_generator,
     epochs=10,

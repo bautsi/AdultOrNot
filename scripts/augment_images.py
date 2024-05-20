@@ -27,4 +27,4 @@ for filename in os.listdir(source_dir):
         for batch in datagen.flow(x, batch_size=1, save_to_dir=source_dir, save_prefix='R', save_format='jpeg'):
             i += 1
             if i >= 10:
-                break  # 停止循環以避免生成無窮多的圖片
+                break

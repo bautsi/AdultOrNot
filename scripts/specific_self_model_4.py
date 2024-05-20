@@ -13,12 +13,12 @@ model = Sequential([
     MaxPooling2D(2, 2),
     Conv2D(64, (3, 3), activation='relu'),
     MaxPooling2D(2, 2),
-    Dropout(0.3),  # 調整 Dropout 比例
+    Dropout(0.3),
     Conv2D(128, (3, 3), activation='relu'),
     MaxPooling2D(2, 2),
     Flatten(),
     Dense(512, activation='relu'),
-    Dropout(0.5),  # 調整 Dropout 比例
+    Dropout(0.5),
     Dense(1, activation='sigmoid')
 ])
 
@@ -42,16 +42,7 @@ train_df = create_dataframe('data/specific_images')
 test_df = train_df.sample(frac=0.2)
 train_df = train_df.drop(test_df.index)
 
-train_datagen = ImageDataGenerator(
-    rescale=1./255,
-    rotation_range=40,
-    width_shift_range=0.2,
-    height_shift_range=0.2,
-    shear_range=0.2,
-    zoom_range=0.2,
-    horizontal_flip=True,
-    fill_mode='nearest'
-)
+train_datagen = ImageDataGenerator(rescale=1./255)
 test_datagen = ImageDataGenerator(rescale=1./255)
 
 train_generator = train_datagen.flow_from_dataframe(

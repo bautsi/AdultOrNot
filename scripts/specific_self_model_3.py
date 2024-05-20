@@ -68,7 +68,6 @@ checkpoint_path = "specific_self_model_3.keras"
 checkpoint = ModelCheckpoint(checkpoint_path, monitor='val_accuracy', verbose=1, save_best_only=True, mode='max', save_format='tf')
 reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=2, min_lr=0.0001, verbose=1)
 
-# 訓練模型
 history = model.fit(
     train_generator,
     epochs=10,
