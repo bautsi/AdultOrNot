@@ -20,7 +20,7 @@ for layer in base_model.layers[:-4]:
 # 增加新的頂層
 x = GlobalAveragePooling2D()(base_model.output)
 x = Dense(1024, activation='relu')(x)
-predictions = Dense(1, activation='sigmoid')(x)  # 用於判斷是否在13至23歲之間
+predictions = Dense(1, activation='sigmoid')(x)  # 二分类输出层
 model = Model(inputs=base_model.input, outputs=predictions)
 
 # 使用 SGD 優化器並設置低學習率
@@ -30,20 +30,18 @@ model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accurac
 # 創建一個 DataFrame，用於 ImageDataGenerator
 def create_dataframe(folder):
     images = []
-    labels = []  # '0' for not in range, '1' for in range (13-23 years)
+    labels = []  # 'N' for non-range, 'R' for range
     for filename in os.listdir(folder):
-        if filename.lower().endswith(('png', 'jpg', 'jpeg')):
-            age = int(filename.split('A')[-1][:2])  # Assuming filename format is 'XXXXXAyy'
-            if 13 <= age <= 23:
-                label = '1'
-            else:
-                label = '0'
+        if filename.startswith('N') and filename.lower().endswith(('png', 'jpg', 'jpeg')):
             images.append(os.path.join(folder, filename))
-            labels.append(label)
+            labels.append('N')
+        elif filename.startswith('R') and filename.lower().endswith(('png', 'jpg', 'jpeg')):
+            images.append(os.path.join(folder, filename))
+            labels.append('R')
     return pd.DataFrame({'filename': images, 'class': labels})
 
 # 準備訓練和測試資料
-train_df = create_dataframe('data/original_images')
+train_df = create_dataframe('data/range_images')
 test_df = train_df.sample(frac=0.2)  # 抽取20%作為測試集
 train_df = train_df.drop(test_df.index)
 
@@ -56,7 +54,7 @@ train_generator = train_datagen.flow_from_dataframe(
     y_col='class',
     target_size=(224, 224),
     class_mode='binary',
-    batch_size=2
+    batch_size=4
 )
 
 test_generator = test_datagen.flow_from_dataframe(
@@ -65,13 +63,13 @@ test_generator = test_datagen.flow_from_dataframe(
     y_col='class',
     target_size=(224, 224),
     class_mode='binary',
-    batch_size=2,
+    batch_size=4,
     shuffle=False
 )
 
 # 設置模型保存的回調
 checkpoint_callback = ModelCheckpoint(
-    'range_VGG16_model_1.keras',  # 模型保存的文件名，使用.keras擴展
+    'range_VGG16_model_2.keras',  # 模型保存的文件名，使用.keras擴展
     monitor='val_accuracy',  # 監控驗證準確率
     save_best_only=True,  # 只保存最好的模型
     mode='max',  # 監控的指標是最大化

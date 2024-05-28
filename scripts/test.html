@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test API</title>
+  </head>
+  <body>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" name="file" id="fileInput" required />
+      <button type="button" id="uploadButton">Upload and Predict</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+      document.getElementById('uploadButton').addEventListener('click', function () {
+        const formData = new FormData(document.getElementById('uploadForm'));
+
+        fetch('http://localhost:5000/predict', {
+          method: 'POST',
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            document.getElementById('result').textContent = 'Prediction: ' + data.result;
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+            document.getElementById('result').textContent = 'Error: ' + error.toString();
+          });
+      });
+    </script>
+  </body>
+</html>
