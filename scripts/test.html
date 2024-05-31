@@ -3,14 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test API</title>
+    <title>Image Prediction</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        flex-direction: column;
+      }
+      form {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      input[type="file"] {
+        margin-bottom: 10px;
+      }
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #333;
+        padding: 10px;
+        background: #e2e3e5;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        width: 300px; /* 或根據需要調整寬度 */
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <form id="uploadForm" enctype="multipart/form-data">
       <input type="file" name="file" id="fileInput" required />
       <button type="button" id="uploadButton">Upload and Predict</button>
     </form>
-    <div id="result"></div>
+    <div id="result">Prediction result will display here</div>
 
     <script>
       document.getElementById('uploadButton').addEventListener('click', function () {

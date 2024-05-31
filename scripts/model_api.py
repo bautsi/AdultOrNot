@@ -7,7 +7,7 @@ import os
 
 app = Flask(__name__)
 CORS(app)  # 啟用 CORS
-model = load_model('models\specific_self_model_3.keras')  # 確保使用正確的模型路徑
+model = load_model('models/transfer_VGG16_model_2.keras')  # 確保使用正確的模型路徑
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -29,7 +29,7 @@ def predict():
         os.remove(img_path)
         print(f"Image removed {img_path}")
 
-        result = "Adult" if prediction[0][0] > 0.5 else "Minor"
+        result = "in range" if prediction[0][0] > 0.5 else "not in range"
         response = jsonify(result=result)
         print("Prediction:", prediction)
         print("Result sent:", result)

@@ -11,7 +11,7 @@ model = Sequential([
     Flatten(),
     Dense(512, activation='relu'),
     Dropout(0.5),
-    Dense(1, activation='sigmoid')  # 二分类输出层
+    Dense(1, activation='sigmoid')
 ])
 
 model.summary()
