@@ -1,0 +1,58 @@
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python scripts\specific_self_model_5.py
+2024-07-15 21:53:19.129818: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-15 21:53:19.786641: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-15 21:53:22.350724: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-15 21:53:23.704956: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-15 21:53:24.767450: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-15 21:53:25.797359: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 663s 18ms/step - loss: 0.6854 - accuracy: 0.5567 - val_loss: 0.6259 - val_accuracy: 0.6398
+
+Epoch 00001: val_accuracy improved from -inf to 0.63979, saving model to best_specific_model.keras
+Epoch 2/10
+37681/37681 [==============================] - 658s 17ms/step - loss: 0.5419 - accuracy: 0.7414 - val_loss: 0.4813 - val_accuracy: 0.7738
+
+Epoch 00002: val_accuracy improved from 0.63979 to 0.77376, saving model to best_specific_model.keras
+Epoch 3/10
+37681/37681 [==============================] - 656s 17ms/step - loss: 0.4980 - accuracy: 0.7669 - val_loss: 0.4840 - val_accuracy: 0.7675
+
+Epoch 00003: val_accuracy did not improve from 0.77376
+Epoch 4/10
+37681/37681 [==============================] - 657s 17ms/step - loss: 0.4740 - accuracy: 0.7833 - val_loss: 0.5501 - val_accuracy: 0.7198
+
+Epoch 00004: val_accuracy did not improve from 0.77376
+
+Epoch 00004: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 5/10
+37681/37681 [==============================] - 655s 17ms/step - loss: 0.4155 - accuracy: 0.8149 - val_loss: 0.4497 - val_accuracy: 0.7941
+
+Epoch 00005: val_accuracy improved from 0.77376 to 0.79415, saving model to best_specific_model.keras
+Epoch 6/10
+37681/37681 [==============================] - 652s 17ms/step - loss: 0.4019 - accuracy: 0.8222 - val_loss: 0.4588 - val_accuracy: 0.7931
+
+Epoch 00006: val_accuracy did not improve from 0.79415
+Epoch 7/10
+37681/37681 [==============================] - 650s 17ms/step - loss: 0.3932 - accuracy: 0.8278 - val_loss: 0.4599 - val_accuracy: 0.7824
+
+Epoch 00007: val_accuracy did not improve from 0.79415
+
+Epoch 00007: ReduceLROnPlateau reducing learning rate to 0.0001.
+Epoch 8/10
+37681/37681 [==============================] - 651s 17ms/step - loss: 0.3795 - accuracy: 0.8351 - val_loss: 0.4329 - val_accuracy: 0.8121
+
+Epoch 00008: val_accuracy improved from 0.79415 to 0.81207, saving model to best_specific_model.keras
+Epoch 9/10
+37681/37681 [==============================] - 654s 17ms/step - loss: 0.3730 - accuracy: 0.8382 - val_loss: 0.4255 - val_accuracy: 0.8177
+
+Epoch 00009: val_accuracy improved from 0.81207 to 0.81774, saving model to best_specific_model.keras
+Epoch 10/10
+37681/37681 [==============================] - 652s 17ms/step - loss: 0.3672 - accuracy: 0.8420 - val_loss: 0.4138 - val_accuracy: 0.8235
+
+Epoch 00010: val_accuracy improved from 0.81774 to 0.82353, saving model to best_specific_model.keras

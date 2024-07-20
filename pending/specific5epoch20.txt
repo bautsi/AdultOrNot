@@ -1,0 +1,235 @@
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_5.py
+2024-07-16 19:59:44.357587: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-16 19:59:46.180112: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-16 19:59:52.151262: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/20
+2024-07-16 19:59:54.513442: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-16 19:59:56.551214: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-16 19:59:58.604191: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 720s 19ms/step - loss: 0.6963 - accuracy: 0.4982 - val_loss: 0.6932 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.49997, saving model to best_specific_model.keras
+Epoch 2/20
+37681/37681 [==============================] - 730s 19ms/step - loss: 0.6934 - accuracy: 0.4981 - val_loss: 0.6934 - val_accuracy: 0.5000
+
+Epoch 00002: val_accuracy improved from 0.49997 to 0.50003, saving model to best_specific_model.keras
+Epoch 3/20
+20941/37681 [===============>..............] - ETA: 4:46 - loss: 0.7073 - accuracy: 0.4988Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_5.py", line 71, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 917, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
+2024-07-16 20:30:04.181908: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_5.py
+2024-07-16 20:30:15.007015: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-16 20:30:16.125350: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-16 20:30:18.601886: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/20
+2024-07-16 20:30:20.350305: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-16 20:30:21.731948: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-16 20:30:23.033200: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 712s 19ms/step - loss: 0.6951 - accuracy: 0.4941 - val_loss: 0.6931 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/20
+37681/37681 [==============================] - 706s 19ms/step - loss: 0.6932 - accuracy: 0.5012 - val_loss: 0.6933 - val_accuracy: 0.5000
+
+Epoch 00002: val_accuracy did not improve from 0.50003
+Epoch 3/20
+  460/37681 [..............................] - ETA: 10:59 - loss: 0.6929 - accuracy: 0.5174Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_5.py", line 71, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-16 20:54:06.256758: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_5.py
+2024-07-16 20:54:19.394983: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-16 20:54:20.796014: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-16 20:54:24.035775: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/20
+2024-07-16 20:54:25.641255: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-16 20:54:27.068520: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-16 20:54:28.455889: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 716s 19ms/step - loss: 0.6972 - accuracy: 0.5002 - val_loss: 0.6934 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.49997, saving model to best_specific_model.keras
+Epoch 2/20
+11697/37681 [========>.....................] - ETA: 7:34 - loss: 0.6935 - accuracy: 0.5009Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_5.py", line 71, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 917, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
+2024-07-16 21:09:46.299458: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_5.py
+2024-07-16 21:09:59.767118: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-16 21:10:00.536517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-16 21:10:03.682540: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/20
+2024-07-16 21:10:05.129442: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-16 21:10:06.704597: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-16 21:10:07.974526: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 676s 18ms/step - loss: 0.6384 - accuracy: 0.6373 - val_loss: 0.5616 - val_accuracy: 0.6973
+
+Epoch 00001: val_accuracy improved from -inf to 0.69732, saving model to best_specific_model.keras
+Epoch 2/20
+37681/37681 [==============================] - 667s 18ms/step - loss: 0.5344 - accuracy: 0.7458 - val_loss: 0.5090 - val_accuracy: 0.7412
+
+Epoch 00002: val_accuracy improved from 0.69732 to 0.74124, saving model to best_specific_model.keras
+Epoch 3/20
+37681/37681 [==============================] - 665s 18ms/step - loss: 0.4970 - accuracy: 0.7700 - val_loss: 0.4998 - val_accuracy: 0.7490
+
+Epoch 00003: val_accuracy improved from 0.74124 to 0.74900, saving model to best_specific_model.keras
+Epoch 4/20
+37681/37681 [==============================] - 665s 18ms/step - loss: 0.4785 - accuracy: 0.7827 - val_loss: 0.4987 - val_accuracy: 0.7647
+
+Epoch 00004: val_accuracy improved from 0.74900 to 0.76471, saving model to best_specific_model.keras
+Epoch 5/20
+37681/37681 [==============================] - 666s 18ms/step - loss: 0.4627 - accuracy: 0.7900 - val_loss: 0.4594 - val_accuracy: 0.7852
+
+Epoch 00005: val_accuracy improved from 0.76471 to 0.78522, saving model to best_specific_model.keras
+Epoch 6/20
+37681/37681 [==============================] - 665s 18ms/step - loss: 0.4520 - accuracy: 0.7964 - val_loss: 0.4874 - val_accuracy: 0.7593
+
+Epoch 00006: val_accuracy did not improve from 0.78522
+Epoch 7/20
+37681/37681 [==============================] - 666s 18ms/step - loss: 0.4543 - accuracy: 0.7960 - val_loss: 0.4800 - val_accuracy: 0.7711
+
+Epoch 00007: val_accuracy did not improve from 0.78522
+
+Epoch 00007: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 8/20
+37681/37681 [==============================] - 670s 18ms/step - loss: 0.3939 - accuracy: 0.8295 - val_loss: 0.4399 - val_accuracy: 0.8003
+
+Epoch 00008: val_accuracy improved from 0.78522 to 0.80031, saving model to best_specific_model.keras
+Epoch 9/20
+37681/37681 [==============================] - 663s 18ms/step - loss: 0.3825 - accuracy: 0.8360 - val_loss: 0.4368 - val_accuracy: 0.8046
+
+Epoch 00009: val_accuracy improved from 0.80031 to 0.80456, saving model to best_specific_model.keras
+Epoch 10/20
+37681/37681 [==============================] - 664s 18ms/step - loss: 0.3737 - accuracy: 0.8388 - val_loss: 0.4509 - val_accuracy: 0.7993
+
+Epoch 00010: val_accuracy did not improve from 0.80456
+Epoch 11/20
+37681/37681 [==============================] - 663s 18ms/step - loss: 0.3665 - accuracy: 0.8443 - val_loss: 0.4613 - val_accuracy: 0.7998
+
+Epoch 00011: val_accuracy did not improve from 0.80456
+
+Epoch 00011: ReduceLROnPlateau reducing learning rate to 0.0001.
+Epoch 12/20
+37681/37681 [==============================] - 663s 18ms/step - loss: 0.3538 - accuracy: 0.8490 - val_loss: 0.4374 - val_accuracy: 0.8086
+
+Epoch 00012: val_accuracy improved from 0.80456 to 0.80856, saving model to best_specific_model.keras
+Epoch 13/20
+37681/37681 [==============================] - 665s 18ms/step - loss: 0.3472 - accuracy: 0.8524 - val_loss: 0.4331 - val_accuracy: 0.8099
+
+Epoch 00013: val_accuracy improved from 0.80856 to 0.80986, saving model to best_specific_model.keras
+Epoch 14/20
+37681/37681 [==============================] - 662s 18ms/step - loss: 0.3464 - accuracy: 0.8542 - val_loss: 0.4387 - val_accuracy: 0.8136
+
+Epoch 00014: val_accuracy improved from 0.80986 to 0.81361, saving model to best_specific_model.keras
+Epoch 15/20
+37681/37681 [==============================] - 663s 18ms/step - loss: 0.3422 - accuracy: 0.8563 - val_loss: 0.4284 - val_accuracy: 0.8144
+
+Epoch 00015: val_accuracy improved from 0.81361 to 0.81441, saving model to best_specific_model.keras
+Epoch 16/20
+37681/37681 [==============================] - 665s 18ms/step - loss: 0.3379 - accuracy: 0.8584 - val_loss: 0.4442 - val_accuracy: 0.8118
+
+Epoch 00016: val_accuracy did not improve from 0.81441
+Epoch 17/20
+37681/37681 [==============================] - 659s 17ms/step - loss: 0.3338 - accuracy: 0.8602 - val_loss: 0.4673 - val_accuracy: 0.8039
+
+Epoch 00017: val_accuracy did not improve from 0.81441
+Epoch 18/20
+37681/37681 [==============================] - 659s 17ms/step - loss: 0.3302 - accuracy: 0.8614 - val_loss: 0.4556 - val_accuracy: 0.8105
+
+Epoch 00018: val_accuracy did not improve from 0.81441
+Epoch 19/20
+37681/37681 [==============================] - 660s 18ms/step - loss: 0.3290 - accuracy: 0.8617 - val_loss: 0.4517 - val_accuracy: 0.8140
+
+Epoch 00019: val_accuracy did not improve from 0.81441
+Epoch 20/20
+37681/37681 [==============================] - 660s 18ms/step - loss: 0.3235 - accuracy: 0.8647 - val_loss: 0.4399 - val_accuracy: 0.8134
+
+Epoch 00020: val_accuracy did not improve from 0.81441

@@ -1,0 +1,895 @@
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6.py
+2024-07-17 20:41:40.734455: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 20:41:41.915433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+2024-07-17 20:41:52.043363: W tensorflow/core/common_runtime/bfc_allocator.cc:457] Allocator (GPU_0_bfc) ran out of memory trying to allocate 676.00MiB (rounded to 708837376)requested by op AddV2
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation.
+Current allocation summary follows.
+Current allocation summary follows.
+2024-07-17 20:41:52.043558: I tensorflow/core/common_runtime/bfc_allocator.cc:1004] BFCAllocator dump for GPU_0_bfc
+2024-07-17 20:41:52.043631: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (256):  Total Chunks: 16, Chunks in use: 16. 4.0KiB allocated for chunks. 4.0KiB in use in bin. 1.3KiB client-requested in use in bin.
+2024-07-17 20:41:52.043720: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (512):  Total Chunks: 5, Chunks in use: 5. 2.5KiB allocated for chunks. 2.5KiB in use in bin. 2.5KiB client-requested in use in bin.
+2024-07-17 20:41:52.043808: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (1024):         Total Chunks: 6, Chunks in use: 6. 6.2KiB allocated for chunks. 6.2KiB in use in bin. 6.0KiB client-requested in use in bin.
+2024-07-17 20:41:52.043972: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (2048):         Total Chunks: 1, Chunks in use: 0. 3.0KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.044047: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (4096):         Total Chunks: 1, Chunks in use: 1. 6.8KiB allocated for chunks. 6.8KiB in use in bin. 6.8KiB client-requested in use in bin.
+2024-07-17 20:41:52.044104: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (8192):         Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.044178: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (16384):        Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.044309: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (32768):        Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.044381: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (65536):        Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.044465: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (131072):       Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.044552: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (262144):       Total Chunks: 1, Chunks in use: 1. 288.0KiB allocated for chunks. 288.0KiB in use in bin. 288.0KiB client-requested in use in bin.
+2024-07-17 20:41:52.044637: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (524288):       Total Chunks: 1, Chunks in use: 0. 576.0KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.044730: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (1048576):      Total Chunks: 1, Chunks in use: 1. 1.12MiB allocated for chunks. 1.12MiB in use in bin. 1.12MiB client-requested in use in bin.
+2024-07-17 20:41:52.044811: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (2097152):      Total Chunks: 1, Chunks in use: 0. 2.25MiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.044891: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (4194304):      Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.044974: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (8388608):      Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.045056: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (16777216):     Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.045137: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (33554432):     Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.045210: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (67108864):     Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.045294: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (134217728):    Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:41:52.045378: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (268435456):    Total Chunks: 3, Chunks in use: 2. 1.61GiB allocated for chunks. 1.32GiB in use in bin. 1.32GiB client-requested in use in bin.
+2024-07-17 20:41:52.045459: I tensorflow/core/common_runtime/bfc_allocator.cc:1027] Bin for 676.00MiB was 256.00MiB, Chunk State:
+2024-07-17 20:41:52.045541: I tensorflow/core/common_runtime/bfc_allocator.cc:1033]   Size: 295.16MiB | Requested Size: 0B | in_use: 0 | bin_num: 20, prev:   Size: 676.00MiB | Requested Size: 676.00MiB | in_use: 1 | bin_num: -1
+2024-07-17 20:41:52.045619: I tensorflow/core/common_runtime/bfc_allocator.cc:1040] Next region of size 1731618304
+2024-07-17 20:41:52.045700: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200000 of size 256 next 1
+2024-07-17 20:41:52.045778: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200100 of size 1280 next 2
+2024-07-17 20:41:52.045855: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200600 of size 256 next 3
+2024-07-17 20:41:52.045930: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200700 of size 256 next 4
+2024-07-17 20:41:52.046005: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200800 of size 256 next 5
+2024-07-17 20:41:52.046082: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200900 of size 256 next 6
+2024-07-17 20:41:52.046157: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200a00 of size 256 next 9
+2024-07-17 20:41:52.046232: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200b00 of size 256 next 10
+2024-07-17 20:41:52.046308: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200c00 of size 256 next 11
+2024-07-17 20:41:52.046384: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200d00 of size 256 next 12
+2024-07-17 20:41:52.046460: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200e00 of size 256 next 13
+2024-07-17 20:41:52.046534: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200f00 of size 256 next 14
+2024-07-17 20:41:52.046601: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201000 of size 256 next 15
+2024-07-17 20:41:52.046679: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201100 of size 512 next 16
+2024-07-17 20:41:52.046754: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201300 of size 512 next 19
+2024-07-17 20:41:52.046828: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201500 of size 512 next 20
+2024-07-17 20:41:52.046891: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201700 of size 512 next 21
+2024-07-17 20:41:52.046952: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201900 of size 512 next 22
+2024-07-17 20:41:52.047003: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201b00 of size 256 next 23
+2024-07-17 20:41:52.047061: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201c00 of size 256 next 24
+2024-07-17 20:41:52.047125: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201d00 of size 1024 next 25
+2024-07-17 20:41:52.047187: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b202100 of size 1024 next 28
+2024-07-17 20:41:52.047237: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b202500 of size 1024 next 29
+2024-07-17 20:41:52.047286: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b202900 of size 1024 next 30
+2024-07-17 20:41:52.047334: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b202d00 of size 1024 next 31
+2024-07-17 20:41:52.047383: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b203100 of size 256 next 32
+2024-07-17 20:41:52.047432: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b203200 of size 256 next 33
+2024-07-17 20:41:52.047480: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 70b203300 of size 3072 next 7
+2024-07-17 20:41:52.047529: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b203f00 of size 6912 next 8
+2024-07-17 20:41:52.047577: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 70b205a00 of size 589824 next 18
+2024-07-17 20:41:52.047625: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b295a00 of size 294912 next 17
+2024-07-17 20:41:52.047673: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 70b2dda00 of size 2359296 next 27
+2024-07-17 20:41:52.047722: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b51da00 of size 1179648 next 26
+2024-07-17 20:41:52.047770: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b63da00 of size 708837376 next 34
+2024-07-17 20:41:52.047819: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 735a3da00 of size 708837376 next 36
+2024-07-17 20:41:52.047867: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 75fe3da00 of size 309496832 next 18446744073709551615
+2024-07-17 20:41:52.047916: I tensorflow/core/common_runtime/bfc_allocator.cc:1065]      Summary of in-use Chunks by size:
+2024-07-17 20:41:52.047968: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 16 Chunks of size 256 totalling 4.0KiB
+2024-07-17 20:41:52.048019: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 5 Chunks of size 512 totalling 2.5KiB
+2024-07-17 20:41:52.048071: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 5 Chunks of size 1024 totalling 5.0KiB
+2024-07-17 20:41:52.048122: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 1280 totalling 1.2KiB
+2024-07-17 20:41:52.048176: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 6912 totalling 6.8KiB
+2024-07-17 20:41:52.048228: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 294912 totalling 288.0KiB
+2024-07-17 20:41:52.048279: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 1179648 totalling 1.12MiB
+2024-07-17 20:41:52.048331: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 2 Chunks of size 708837376 totalling 1.32GiB
+2024-07-17 20:41:52.048381: I tensorflow/core/common_runtime/bfc_allocator.cc:1072] Sum Total of in-use chunks: 1.32GiB
+2024-07-17 20:41:52.048427: I tensorflow/core/common_runtime/bfc_allocator.cc:1074] total_region_allocated_bytes_: 1731618304 memory_limit_: 1731618407 available bytes: 103 curr_region_allocation_bytes_: 3463237120
+2024-07-17 20:41:52.048481: I tensorflow/core/common_runtime/bfc_allocator.cc:1080] Stats:
+Limit:                      1731618407
+InUse:                      1419169280
+MaxInUse:                   1419169536
+NumAllocs:                          42
+MaxAllocSize:                708837376
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2024-07-17 20:41:52.048566: W tensorflow/core/common_runtime/bfc_allocator.cc:468] ***********************************************************************************_________________
+2024-07-17 20:41:52.048953: W tensorflow/core/framework/op_kernel.cc:1680] Resource exhausted: failed to allocate memory
+Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6.py", line 11, in <module>
+    model = Sequential([
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\training\tracking\base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\sequential.py", line 134, in __init__
+    self.add(layer)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\training\tracking\base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\sequential.py", line 217, in add
+    output_tensor = layer(self.outputs[0])
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 976, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 1114, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 848, in _keras_tensor_symbolic_call
+    return self._infer_output_signature(inputs, args, kwargs, input_masks)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 886, in _infer_output_signature
+    self._maybe_build(inputs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 2659, in _maybe_build
+    self.build(input_shapes)  # pylint:disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\layers\core.py", line 1178, in build
+    self.kernel = self.add_weight(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 647, in add_weight
+    variable = self._add_variable_with_custom_getter(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\training\tracking\base.py", line 813, in _add_variable_with_custom_getter
+    new_variable = getter(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer_utils.py", line 117, in make_variable
+    return tf.compat.v1.Variable(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variables.py", line 266, in __call__
+    return cls._variable_v1_call(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variables.py", line 212, in _variable_v1_call
+    return previous_getter(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variables.py", line 205, in <lambda>
+    previous_getter = lambda **kwargs: default_variable_creator(None, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variable_scope.py", line 2612, in default_variable_creator
+    return resource_variable_ops.ResourceVariable(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variables.py", line 270, in __call__
+    return super(VariableMetaclass, cls).__call__(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\resource_variable_ops.py", line 1602, in __init__
+    self._init_from_args(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\resource_variable_ops.py", line 1740, in _init_from_args
+    initial_value = initial_value()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\initializers\initializers_v2.py", line 517, in __call__
+    return self._random_generator.random_uniform(shape, -limit, limit, dtype)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\initializers\initializers_v2.py", line 972, in random_uniform
+    return op(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\random_ops.py", line 315, in random_uniform
+    result = math_ops.add(result * (maxval - minval), minval, name=name)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\math_ops.py", line 3943, in add
+    return gen_math_ops.add_v2(x, y, name=name)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\gen_math_ops.py", line 454, in add_v2
+    _ops.raise_from_not_ok_status(e, name)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 6941, in raise_from_not_ok_status
+    six.raise_from(core._status_to_exception(e.code, message), None)
+  File "<string>", line 3, in raise_from
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: failed to allocate memory [Op:AddV2]
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6.py
+2024-07-17 20:51:12.499387: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 20:51:13.644567: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+2024-07-17 20:51:23.775461: W tensorflow/core/common_runtime/bfc_allocator.cc:457] Allocator (GPU_0_bfc) ran out of memory trying to allocate 676.00MiB (rounded to 708837376)requested by op AddV2
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation.
+Current allocation summary follows.
+Current allocation summary follows.
+2024-07-17 20:51:23.775667: I tensorflow/core/common_runtime/bfc_allocator.cc:1004] BFCAllocator dump for GPU_0_bfc
+2024-07-17 20:51:23.775751: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (256):  Total Chunks: 16, Chunks in use: 16. 4.0KiB allocated for chunks. 4.0KiB in use in bin. 1.3KiB client-requested in use in bin.
+2024-07-17 20:51:23.775876: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (512):  Total Chunks: 5, Chunks in use: 5. 2.5KiB allocated for chunks. 2.5KiB in use in bin. 2.5KiB client-requested in use in bin.
+2024-07-17 20:51:23.775982: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (1024):         Total Chunks: 6, Chunks in use: 6. 6.2KiB allocated for chunks. 6.2KiB in use in bin. 6.0KiB client-requested in use in bin.
+2024-07-17 20:51:23.776081: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (2048):         Total Chunks: 1, Chunks in use: 0. 3.0KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.776176: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (4096):         Total Chunks: 1, Chunks in use: 1. 6.8KiB allocated for chunks. 6.8KiB in use in bin. 6.8KiB client-requested in use in bin.
+2024-07-17 20:51:23.776268: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (8192):         Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.776355: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (16384):        Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.776454: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (32768):        Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.776544: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (65536):        Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.776636: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (131072):       Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.776735: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (262144):       Total Chunks: 1, Chunks in use: 1. 288.0KiB allocated for chunks. 288.0KiB in use in bin. 288.0KiB client-requested in use in bin.
+2024-07-17 20:51:23.776853: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (524288):       Total Chunks: 1, Chunks in use: 0. 576.0KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.776983: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (1048576):      Total Chunks: 1, Chunks in use: 1. 1.12MiB allocated for chunks. 1.12MiB in use in bin. 1.12MiB client-requested in use in bin.
+2024-07-17 20:51:23.777085: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (2097152):      Total Chunks: 1, Chunks in use: 0. 2.25MiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.777174: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (4194304):      Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.777261: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (8388608):      Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.777367: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (16777216):     Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.777442: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (33554432):     Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.777527: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (67108864):     Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.777610: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (134217728):    Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2024-07-17 20:51:23.777697: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (268435456):    Total Chunks: 3, Chunks in use: 2. 1.61GiB allocated for chunks. 1.32GiB in use in bin. 1.32GiB client-requested in use in bin.
+2024-07-17 20:51:23.777781: I tensorflow/core/common_runtime/bfc_allocator.cc:1027] Bin for 676.00MiB was 256.00MiB, Chunk State:
+2024-07-17 20:51:23.777869: I tensorflow/core/common_runtime/bfc_allocator.cc:1033]   Size: 295.16MiB | Requested Size: 0B | in_use: 0 | bin_num: 20, prev:   Size: 676.00MiB | Requested Size: 676.00MiB | in_use: 1 | bin_num: -1
+2024-07-17 20:51:23.777946: I tensorflow/core/common_runtime/bfc_allocator.cc:1040] Next region of size 1731618304
+2024-07-17 20:51:23.778027: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200000 of size 256 next 1
+2024-07-17 20:51:23.778106: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200100 of size 1280 next 2
+2024-07-17 20:51:23.778183: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200600 of size 256 next 3
+2024-07-17 20:51:23.778262: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200700 of size 256 next 4
+2024-07-17 20:51:23.778338: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200800 of size 256 next 5
+2024-07-17 20:51:23.778416: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200900 of size 256 next 6
+2024-07-17 20:51:23.778492: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200a00 of size 256 next 9
+2024-07-17 20:51:23.778570: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200b00 of size 256 next 10
+2024-07-17 20:51:23.778636: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200c00 of size 256 next 11
+2024-07-17 20:51:23.778702: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200d00 of size 256 next 12
+2024-07-17 20:51:23.778768: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200e00 of size 256 next 13
+2024-07-17 20:51:23.778847: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b200f00 of size 256 next 14
+2024-07-17 20:51:23.778913: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201000 of size 256 next 15
+2024-07-17 20:51:23.778969: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201100 of size 512 next 16
+2024-07-17 20:51:23.779022: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201300 of size 512 next 19
+2024-07-17 20:51:23.779073: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201500 of size 512 next 20
+2024-07-17 20:51:23.779124: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201700 of size 512 next 21
+2024-07-17 20:51:23.779176: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201900 of size 512 next 22
+2024-07-17 20:51:23.779226: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201b00 of size 256 next 23
+2024-07-17 20:51:23.779277: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201c00 of size 256 next 24
+2024-07-17 20:51:23.779327: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b201d00 of size 1024 next 25
+2024-07-17 20:51:23.779376: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b202100 of size 1024 next 28
+2024-07-17 20:51:23.779428: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b202500 of size 1024 next 29
+2024-07-17 20:51:23.779477: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b202900 of size 1024 next 30
+2024-07-17 20:51:23.779526: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b202d00 of size 1024 next 31
+2024-07-17 20:51:23.779576: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b203100 of size 256 next 32
+2024-07-17 20:51:23.779626: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b203200 of size 256 next 33
+2024-07-17 20:51:23.779675: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 70b203300 of size 3072 next 7
+2024-07-17 20:51:23.779724: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b203f00 of size 6912 next 8
+2024-07-17 20:51:23.779777: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 70b205a00 of size 589824 next 18
+2024-07-17 20:51:23.779833: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b295a00 of size 294912 next 17
+2024-07-17 20:51:23.779892: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 70b2dda00 of size 2359296 next 27
+2024-07-17 20:51:23.779948: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b51da00 of size 1179648 next 26
+2024-07-17 20:51:23.780001: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 70b63da00 of size 708837376 next 34
+2024-07-17 20:51:23.780056: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 735a3da00 of size 708837376 next 36
+2024-07-17 20:51:23.780105: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 75fe3da00 of size 309496832 next 18446744073709551615
+2024-07-17 20:51:23.780155: I tensorflow/core/common_runtime/bfc_allocator.cc:1065]      Summary of in-use Chunks by size:
+2024-07-17 20:51:23.780233: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 16 Chunks of size 256 totalling 4.0KiB
+2024-07-17 20:51:23.780293: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 5 Chunks of size 512 totalling 2.5KiB
+2024-07-17 20:51:23.780348: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 5 Chunks of size 1024 totalling 5.0KiB
+2024-07-17 20:51:23.780404: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 1280 totalling 1.2KiB
+2024-07-17 20:51:23.780458: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 6912 totalling 6.8KiB
+2024-07-17 20:51:23.780513: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 294912 totalling 288.0KiB
+2024-07-17 20:51:23.780568: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 1179648 totalling 1.12MiB
+2024-07-17 20:51:23.780623: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 2 Chunks of size 708837376 totalling 1.32GiB
+2024-07-17 20:51:23.780674: I tensorflow/core/common_runtime/bfc_allocator.cc:1072] Sum Total of in-use chunks: 1.32GiB
+2024-07-17 20:51:23.780724: I tensorflow/core/common_runtime/bfc_allocator.cc:1074] total_region_allocated_bytes_: 1731618304 memory_limit_: 1731618407 available bytes: 103 curr_region_allocation_bytes_: 3463237120
+2024-07-17 20:51:23.780781: I tensorflow/core/common_runtime/bfc_allocator.cc:1080] Stats:
+Limit:                      1731618407
+InUse:                      1419169280
+MaxInUse:                   1419169536
+NumAllocs:                          42
+MaxAllocSize:                708837376
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2024-07-17 20:51:23.780871: W tensorflow/core/common_runtime/bfc_allocator.cc:468] ***********************************************************************************_________________
+2024-07-17 20:51:23.780937: W tensorflow/core/framework/op_kernel.cc:1680] Resource exhausted: failed to allocate memory
+Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6.py", line 11, in <module>
+    model = Sequential([
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\training\tracking\base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\sequential.py", line 134, in __init__
+    self.add(layer)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\training\tracking\base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\sequential.py", line 217, in add
+    output_tensor = layer(self.outputs[0])
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 976, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 1114, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 848, in _keras_tensor_symbolic_call
+    return self._infer_output_signature(inputs, args, kwargs, input_masks)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 886, in _infer_output_signature
+    self._maybe_build(inputs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 2659, in _maybe_build
+    self.build(input_shapes)  # pylint:disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\layers\core.py", line 1178, in build
+    self.kernel = self.add_weight(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer.py", line 647, in add_weight
+    variable = self._add_variable_with_custom_getter(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\training\tracking\base.py", line 813, in _add_variable_with_custom_getter
+    new_variable = getter(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\base_layer_utils.py", line 117, in make_variable
+    return tf.compat.v1.Variable(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variables.py", line 266, in __call__
+    return cls._variable_v1_call(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variables.py", line 212, in _variable_v1_call
+    return previous_getter(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variables.py", line 205, in <lambda>
+    previous_getter = lambda **kwargs: default_variable_creator(None, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variable_scope.py", line 2612, in default_variable_creator
+    return resource_variable_ops.ResourceVariable(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\variables.py", line 270, in __call__
+    return super(VariableMetaclass, cls).__call__(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\resource_variable_ops.py", line 1602, in __init__
+    self._init_from_args(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\resource_variable_ops.py", line 1740, in _init_from_args
+    initial_value = initial_value()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\initializers\initializers_v2.py", line 517, in __call__
+    return self._random_generator.random_uniform(shape, -limit, limit, dtype)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\initializers\initializers_v2.py", line 972, in random_uniform
+    return op(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\random_ops.py", line 315, in random_uniform
+    result = math_ops.add(result * (maxval - minval), minval, name=name)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\math_ops.py", line 3943, in add
+    return gen_math_ops.add_v2(x, y, name=name)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\ops\gen_math_ops.py", line 454, in add_v2
+    _ops.raise_from_not_ok_status(e, name)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 6941, in raise_from_not_ok_status
+    six.raise_from(core._status_to_exception(e.code, message), None)
+  File "<string>", line 3, in raise_from
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: failed to allocate memory [Op:AddV2]
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-1.py
+2024-07-17 20:59:17.286579: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 20:59:17.866194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-1.py", line 82, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1134, in fit
+    data_handler = data_adapter.get_data_handler(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 1383, in get_data_handler
+    return DataHandler(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 1138, in __init__
+    self._adapter = adapter_cls(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 917, in __init__
+    super(KerasSequenceAdapter, self).__init__(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 794, in __init__
+    peek, x = self._peek_and_restore(x)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 928, in _peek_and_restore
+    return x[0], x
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras_preprocessing\image\iterator.py", line 65, in __getitem__
+    return self._get_batches_of_transformed_samples(index_array)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras_preprocessing\image\iterator.py", line 250, in _get_batches_of_transformed_samples
+    img.save(os.path.join(self.save_to_dir, fname))
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\PIL\Image.py", line 2456, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\b3r1a\\OneDrive\\桌面\\AdultOrNot\\cache\\train\\aug__12090_3999561.jpeg'
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-1.py
+2024-07-17 20:59:48.281577: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 20:59:48.863131: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-1.py", line 82, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1134, in fit
+    data_handler = data_adapter.get_data_handler(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 1383, in get_data_handler
+    return DataHandler(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 1138, in __init__
+    self._adapter = adapter_cls(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 917, in __init__
+    super(KerasSequenceAdapter, self).__init__(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 794, in __init__
+    peek, x = self._peek_and_restore(x)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 928, in _peek_and_restore
+    return x[0], x
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras_preprocessing\image\iterator.py", line 65, in __getitem__
+    return self._get_batches_of_transformed_samples(index_array)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras_preprocessing\image\iterator.py", line 250, in _get_batches_of_transformed_samples
+    img.save(os.path.join(self.save_to_dir, fname))
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\PIL\Image.py", line 2456, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\b3r1a\\OneDrive\\桌面\\AdultOrNot\\cache\\train\\aug__3958_824137.jpeg'
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-1.py
+2024-07-17 21:01:41.945004: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 21:01:42.575438: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-1.py", line 82, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1134, in fit
+    data_handler = data_adapter.get_data_handler(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 1383, in get_data_handler
+    return DataHandler(*args, **kwargs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 1138, in __init__
+    self._adapter = adapter_cls(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 917, in __init__
+    super(KerasSequenceAdapter, self).__init__(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 794, in __init__
+    peek, x = self._peek_and_restore(x)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\data_adapter.py", line 928, in _peek_and_restore
+    return x[0], x
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras_preprocessing\image\iterator.py", line 65, in __getitem__
+    return self._get_batches_of_transformed_samples(index_array)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras_preprocessing\image\iterator.py", line 250, in _get_batches_of_transformed_samples
+    img.save(os.path.join(self.save_to_dir, fname))
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\PIL\Image.py", line 2456, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\b3r1a\\OneDrive\\桌面\\AdultOrNot\\cache\\train\\aug__8784_2024915.jpeg'
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-1.py
+2024-07-17 21:03:05.968733: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 21:03:06.575849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 21:03:09.896024: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 21:03:12.257578: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 21:03:14.317642: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 21:03:16.380525: W tensorflow/core/common_runtime/bfc_allocator.cc:272] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.04GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2024-07-17 21:03:16.380726: W tensorflow/core/common_runtime/bfc_allocator.cc:272] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.04GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2024-07-17 21:03:16.449910: W tensorflow/core/common_runtime/bfc_allocator.cc:272] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.05GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2024-07-17 21:03:16.450115: W tensorflow/core/common_runtime/bfc_allocator.cc:272] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.05GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-1.py", line 82, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 950, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.InvalidArgumentError:  Input to reshape is a tensor with 173056 values, but the requested shape requires a multiple of 50176
+         [[node sequential/flatten/Reshape (defined at \scripts\specific_self_model_6-1.py:82) ]] [Op:__inference_train_function_1286]
+
+Function call stack:
+train_function
+
+2024-07-17 21:03:16.618174: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-2.py
+2024-07-17 21:07:55.926971: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 21:07:56.500277: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 21:07:59.779457: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 21:08:01.189826: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 21:08:02.379464: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 21:08:03.623850: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 675s 18ms/step - loss: 0.7072 - accuracy: 0.5010 - val_loss: 0.6934 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/10
+36549/37681 [============================>.] - ETA: 18s - loss: 0.6933 - accuracy: 0.5005Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-2.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-17 21:29:10.805574: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-2.py
+2024-07-17 21:29:18.421745: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 21:29:19.027050: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 21:29:21.149283: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 21:29:22.404051: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 21:29:23.340169: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 21:29:24.973385: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 663s 17ms/step - loss: 0.7069 - accuracy: 0.4993 - val_loss: 0.6939 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/10
+14526/37681 [==========>...................] - ETA: 6:11 - loss: 0.6935 - accuracy: 0.5001Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-2.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-17 21:44:19.079746: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-2.py
+2024-07-17 21:44:26.727456: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 21:44:27.792360: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 21:44:29.928223: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 21:44:31.207102: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 21:44:32.078837: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 21:44:33.068155: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 675s 18ms/step - loss: 0.7040 - accuracy: 0.4996 - val_loss: 0.6935 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.49997, saving model to best_specific_model.keras
+Epoch 2/10
+ 9011/37681 [======>.......................] - ETA: 7:47 - loss: 0.6935 - accuracy: 0.4948Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-2.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-17 21:58:13.600372: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-2.py
+2024-07-17 21:58:21.277132: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 21:58:21.883580: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 21:58:23.983464: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 21:58:25.223478: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 21:58:26.133728: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 21:58:27.109808: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 660s 17ms/step - loss: 0.7047 - accuracy: 0.4988 - val_loss: 0.6932 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/10
+37678/37681 [============================>.] - ETA: 0s - loss: 0.6933 - accuracy: 0.4984Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-2.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1215, in fit
+    val_logs = self.evaluate(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1501, in evaluate
+    tmp_logs = self.test_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 924, in _call
+    results = self._stateful_fn(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
+2024-07-17 22:19:27.066616: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-2.py
+2024-07-17 22:19:34.148837: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 22:19:34.719883: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 22:19:36.836247: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 22:19:38.055311: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 22:19:38.954387: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 22:19:39.920693: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 671s 18ms/step - loss: 0.7102 - accuracy: 0.5044 - val_loss: 0.6932 - val_accuracy: 0.5001
+
+Epoch 00001: val_accuracy improved from -inf to 0.50009, saving model to best_specific_model.keras
+Epoch 2/10
+37681/37681 [==============================] - 669s 18ms/step - loss: 0.6934 - accuracy: 0.4969 - val_loss: 0.6932 - val_accuracy: 0.5000
+
+Epoch 00002: val_accuracy did not improve from 0.50009
+Epoch 3/10
+20146/37681 [===============>..............] - ETA: 4:43 - loss: 0.6933 - accuracy: 0.4981Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-2.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-17 22:47:24.584403: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-2.py
+2024-07-17 22:47:32.530550: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 22:47:33.105862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 22:47:35.199332: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 22:47:36.453841: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 22:47:37.320855: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 22:47:38.356584: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 669s 18ms/step - loss: 0.7031 - accuracy: 0.5002 - val_loss: 0.6931 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/10
+13536/37681 [=========>....................] - ETA: 6:30 - loss: 0.6935 - accuracy: 0.5004Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-2.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-17 23:02:24.675080: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-2.py
+2024-07-17 23:02:32.589808: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 23:02:33.166863: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 23:02:35.249257: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 23:02:36.489338: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 23:02:37.453588: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 23:02:38.467141: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 666s 18ms/step - loss: 0.6994 - accuracy: 0.4939 - val_loss: 0.6931 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.49997, saving model to best_specific_model.keras
+Epoch 2/10
+37681/37681 [==============================] - 665s 18ms/step - loss: 0.6933 - accuracy: 0.4984 - val_loss: 0.6932 - val_accuracy: 0.5000
+
+Epoch 00002: val_accuracy did not improve from 0.49997
+Epoch 3/10
+37681/37681 [==============================] - 663s 18ms/step - loss: 0.6932 - accuracy: 0.5033 - val_loss: 0.6931 - val_accuracy: 0.5000
+
+Epoch 00003: val_accuracy improved from 0.49997 to 0.50003, saving model to best_specific_model.keras
+
+Epoch 00003: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 4/10
+32554/37681 [========================>.....] - ETA: 1:22 - loss: 0.6932 - accuracy: 0.4982Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-2.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 917, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
+2024-07-17 23:44:33.503082: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-2.py
+2024-07-17 23:44:40.889030: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 23:44:41.492477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 23:44:43.583406: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 23:44:45.129618: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 23:44:46.124449: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 23:44:47.329995: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 661s 17ms/step - loss: 0.7103 - accuracy: 0.4993 - val_loss: 0.6935 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.49997, saving model to best_specific_model.keras
+Epoch 2/10
+ 7015/37681 [====>.........................] - ETA: 8:06 - loss: 0.6935 - accuracy: 0.4902Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-2.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-17 23:57:36.896505: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_6-2.py
+2024-07-17 23:57:45.746603: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-17 23:57:46.348596: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-17 23:57:48.419828: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-17 23:57:49.636482: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-17 23:57:50.529315: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-17 23:57:51.523256: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 659s 17ms/step - loss: 0.7064 - accuracy: 0.5013 - val_loss: 0.6932 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.49997, saving model to best_specific_model.keras
+Epoch 2/10
+37681/37681 [==============================] - 656s 17ms/step - loss: 0.6933 - accuracy: 0.4964 - val_loss: 0.6933 - val_accuracy: 0.5000
+
+Epoch 00002: val_accuracy did not improve from 0.49997
+Epoch 3/10
+19621/37681 [==============>...............] - ETA: 4:46 - loss: 0.6933 - accuracy: 0.4993Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_6-2.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-18 00:24:56.416130: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>

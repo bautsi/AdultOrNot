@@ -1,0 +1,441 @@
+
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_7.py
+2024-07-19 21:11:02.817876: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-19 21:11:04.381028: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-19 21:11:08.512915: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-19 21:11:10.927048: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-19 21:11:12.954854: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-19 21:11:15.564515: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 684s 18ms/step - loss: 0.7175 - accuracy: 0.4991 - val_loss: 0.6932 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/10
+  447/37681 [..............................] - ETA: 10:03 - loss: 0.6939 - accuracy: 0.4698Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_7.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 917, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
+2024-07-19 21:22:40.940185: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_7.py
+2024-07-19 21:22:55.799888: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-19 21:22:57.077819: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-19 21:22:59.793875: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-19 21:23:01.055027: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-19 21:23:02.201464: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-19 21:23:04.151396: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 668s 18ms/step - loss: 0.7011 - accuracy: 0.4971 - val_loss: 0.6933 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/10
+ 8181/37681 [=====>........................] - ETA: 7:54 - loss: 0.6934 - accuracy: 0.4953Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_7.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-19 21:36:20.431091: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_7.py
+2024-07-19 21:36:35.435862: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-19 21:36:36.566537: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-19 21:36:38.822512: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-19 21:36:40.243032: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-19 21:36:41.329100: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-19 21:36:42.533829: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 672s 18ms/step - loss: 0.7120 - accuracy: 0.4978 - val_loss: 0.6937 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/10
+ 5779/37681 [===>..........................] - ETA: 8:37 - loss: 0.6937 - accuracy: 0.4939Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_7.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 917, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
+2024-07-19 21:49:25.853588: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_7.py
+2024-07-19 21:49:32.771949: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-19 21:49:33.346628: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-19 21:49:35.456613: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-19 21:49:36.698608: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-19 21:49:37.569918: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-19 21:49:38.691254: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 672s 18ms/step - loss: 0.6985 - accuracy: 0.5026 - val_loss: 0.6934 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/10
+30964/37681 [=======================>......] - ETA: 1:48 - loss: 0.6933 - accuracy: 0.5009Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_7.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-19 22:09:11.886635: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_7.py
+2024-07-19 22:09:18.833000: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-19 22:09:19.432447: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-19 22:09:21.529172: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-19 22:09:22.755138: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-19 22:09:23.645210: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-19 22:09:24.651614: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 661s 17ms/step - loss: 0.7089 - accuracy: 0.4995 - val_loss: 0.6931 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.50003, saving model to best_specific_model.keras
+Epoch 2/10
+37681/37681 [==============================] - 656s 17ms/step - loss: 0.6934 - accuracy: 0.4960 - val_loss: 0.6935 - val_accuracy: 0.5000
+
+Epoch 00002: val_accuracy did not improve from 0.50003
+Epoch 3/10
+37681/37681 [==============================] - 655s 17ms/step - loss: 0.6934 - accuracy: 0.4982 - val_loss: 0.6932 - val_accuracy: 0.5000
+
+Epoch 00003: val_accuracy did not improve from 0.50003
+
+Epoch 00003: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 4/10
+11169/37681 [=======>......................] - ETA: 7:00 - loss: 0.6931 - accuracy: 0.5051Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_7.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-19 22:45:11.970982: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_7.py
+2024-07-19 22:45:18.499511: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-19 22:45:19.098409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-19 22:45:21.211008: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-19 22:45:22.430989: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-19 22:45:23.400672: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-19 22:45:24.493614: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 659s 17ms/step - loss: 0.7020 - accuracy: 0.5028 - val_loss: 0.7098 - val_accuracy: 0.5210
+
+Epoch 00001: val_accuracy improved from -inf to 0.52103, saving model to best_specific_model.keras
+Epoch 2/10
+37681/37681 [==============================] - 655s 17ms/step - loss: 0.6944 - accuracy: 0.4969 - val_loss: 0.6934 - val_accuracy: 0.5000
+
+Epoch 00002: val_accuracy did not improve from 0.52103
+Epoch 3/10
+20749/37681 [===============>..............] - ETA: 4:28 - loss: 0.6934 - accuracy: 0.4949Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_7.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 917, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
+2024-07-19 23:12:45.590962: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_7.py
+2024-07-19 23:12:53.725090: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-19 23:12:54.294878: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-19 23:12:56.414518: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-19 23:12:57.626607: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-19 23:12:58.700990: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-19 23:12:59.755854: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 670s 18ms/step - loss: 0.6986 - accuracy: 0.5015 - val_loss: 0.6931 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.49997, saving model to best_specific_model.keras
+Epoch 2/10
+37681/37681 [==============================] - 671s 18ms/step - loss: 0.6938 - accuracy: 0.4966 - val_loss: 0.6932 - val_accuracy: 0.5000
+
+Epoch 00002: val_accuracy improved from 0.49997 to 0.50003, saving model to best_specific_model.keras
+Epoch 3/10
+37681/37681 [==============================] - 667s 18ms/step - loss: 0.6933 - accuracy: 0.5028 - val_loss: 0.6933 - val_accuracy: 0.5000
+
+Epoch 00003: val_accuracy did not improve from 0.50003
+
+Epoch 00003: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 4/10
+10920/37681 [=======>......................] - ETA: 7:12 - loss: 0.6931 - accuracy: 0.5077Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_7.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1189, in fit
+    callbacks.on_train_batch_end(end_step, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 435, in on_train_batch_end
+    self._call_batch_hook(ModeKeys.TRAIN, 'end', batch, logs=logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 295, in _call_batch_hook
+    self._call_batch_end_hook(mode, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 315, in _call_batch_end_hook
+    self._call_batch_hook_helper(hook_name, batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 353, in _call_batch_hook_helper
+    hook(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1028, in on_train_batch_end
+    self._batch_update_progbar(batch, logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\callbacks.py", line 1100, in _batch_update_progbar
+    logs = tf_utils.sync_to_numpy_or_python_type(logs)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 516, in sync_to_numpy_or_python_type
+    return tf.nest.map_structure(_to_single_numpy_or_python_type, tensors)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in map_structure
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\util\nest.py", line 869, in <listcomp>
+    structure[0], [func(*x) for x in entries],
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\utils\tf_utils.py", line 512, in _to_single_numpy_or_python_type
+    x = t.numpy()
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1094, in numpy
+    maybe_arr = self._numpy()  # pylint: disable=protected-access
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 1060, in _numpy
+    return self._numpy_internal()
+KeyboardInterrupt
+2024-07-19 23:49:23.801350: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_7.py
+2024-07-19 23:49:31.282777: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-19 23:49:32.354018: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-19 23:49:34.465320: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-19 23:49:35.647030: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-19 23:49:36.730160: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-19 23:49:37.798913: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 672s 18ms/step - loss: 0.7000 - accuracy: 0.5035 - val_loss: 0.6931 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.49997, saving model to best_specific_model.keras
+Epoch 2/10
+37681/37681 [==============================] - 668s 18ms/step - loss: 0.6934 - accuracy: 0.5038 - val_loss: 0.6933 - val_accuracy: 0.5000
+
+Epoch 00002: val_accuracy did not improve from 0.49997
+Epoch 3/10
+32992/37681 [=========================>....] - ETA: 1:15 - loss: 0.6933 - accuracy: 0.5014Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_7.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 917, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
+2024-07-20 00:20:46.860769: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>python .\scripts\specific_self_model_7.py
+2024-07-20 00:20:53.897252: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-20 00:20:54.502096: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1651 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+Found 37681 validated image filenames belonging to 2 classes.
+Found 16235 validated image filenames belonging to 2 classes.
+2024-07-20 00:20:56.586889: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/10
+2024-07-20 00:20:57.806145: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8100
+2024-07-20 00:20:58.802988: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: ptxas exited with non-zero error code -1, output:
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2024-07-20 00:20:59.943858: I tensorflow/stream_executor/cuda/cuda_blas.cc:1760] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+37681/37681 [==============================] - 661s 17ms/step - loss: 0.7064 - accuracy: 0.5020 - val_loss: 0.6936 - val_accuracy: 0.5000
+
+Epoch 00001: val_accuracy improved from -inf to 0.49997, saving model to best_specific_model.keras
+Epoch 2/10
+10381/37681 [=======>......................] - ETA: 7:15 - loss: 0.7030 - accuracy: 0.4907Traceback (most recent call last):
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\scripts\specific_self_model_7.py", line 72, in <module>
+    history = model.fit(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\keras\engine\training.py", line 1184, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 885, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\def_function.py", line 917, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 3039, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 1963, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\function.py", line 591, in call
+    outputs = execute.execute(
+  File "C:\Users\b3r1a\OneDrive\桌面\AdultOrNot\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 59, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
+2024-07-20 00:34:44.958819: W tensorflow/core/kernels/data/generator_dataset_op.cc:107] Error occurred when finalizing GeneratorDataset iterator: Failed precondition: Python interpreter state is not initialized. The process may be terminated.
+         [[{{node PyFunc}}]]
+^C
+(venv) C:\Users\b3r1a\OneDrive\桌面\AdultOrNot>
